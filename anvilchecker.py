@@ -88,7 +88,7 @@ def check_memory_map(mm, rx=0, rz=0):
             for i in range(section_offset, section_offset + sector_count):
                 if i in section_ownerships:
                     print_diagnostic()
-                    print("!!COLLISION!! Collision found! At sector {}, ({}) and ({}) collided.".format(identifier, section_ownerships[i]))
+                    print("!!COLLISION!! Collision found! At sector {}, ({}) and ({}) collided.".format(identifier, identifier, section_ownerships[i]))
                     has_collision = True
                 else:
                     section_ownerships[i] = identifier
